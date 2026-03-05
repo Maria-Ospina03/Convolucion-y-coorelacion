@@ -19,3 +19,8 @@ La convolución es una operación matemática que combina dos funciones para des
 ### Análisis
 
 ## Referencias
+
+
+![Diagrama de flujo parte A](2ParteA.png)
+
+![Diagrama de flujo parte B](2ParteB.png)
