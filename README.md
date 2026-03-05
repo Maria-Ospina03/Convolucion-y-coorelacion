@@ -17,9 +17,9 @@ Estas herramientas son ampliamente utilizadas en el procesamiento de señales, y
 ### Parte A
 Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encontró la señal y(n) resultante de la convolución, su representación gráfica y secuencial. Ésto se hizo a mano y programando un código en python.
 
-#### Código:
+#### Código :
 ![Diagrama de flujo del código](2ParteA.png)
-#### Gráfico
+#### Gráfico (Camila Ospina)
 ![Gráficas A](2senalA.png)
 
 ```python
@@ -38,7 +38,7 @@ n_y = np.arange(len(y))
 
 ```
 
-#### Manual: 
+#### Manual (Camila Ospina): 
 ![Gráfica manual convolución](ConvA.jpeg)
 
 
