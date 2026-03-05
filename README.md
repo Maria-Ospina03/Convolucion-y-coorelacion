@@ -21,7 +21,7 @@ Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encon
 ![Diagrama de flujo del código](2ParteA.png)
 #### Gráfico (Camila Ospina)
 ![Gráficas A](2senalA.png)
-#### Grafico (Juan Serna)
+
 ```python
 # Convolución
 y = np.convolve(x, h)
