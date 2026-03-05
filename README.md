@@ -19,6 +19,9 @@ Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encon
 
 #### Código:
 ![Diagrama de flujo del código](2ParteA.png)
+#### Gráfico
+![Gráficas A](2senalA.png)
+
 
 #### Manual: 
 
