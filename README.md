@@ -24,7 +24,7 @@ Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encon
 
 
 #### Manual: 
-
+![Gráfica manual convolución](ConvA.png)
 
 
 ### Parte B
