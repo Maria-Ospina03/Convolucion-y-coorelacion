@@ -22,7 +22,6 @@ Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encon
 #### Gráfico (Camila Ospina)
 ![Gráficas A](2senalA.png)
 #### Grafico (Juan Serna)
-<img width="1178" height="1600" alt="image" src="https://github.com/user-attachments/assets/20b5c9af-0948-4a5f-bc03-c63d19767e09" />
 ```python
 # Convolución
 y = np.convolve(x, h)
