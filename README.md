@@ -22,9 +22,25 @@ Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encon
 #### Gráfico
 ![Gráficas A](2senalA.png)
 
+```python
+# Convolución
+y = np.convolve(x, h)
+
+# Mostrar resultado
+print("Señal h[n]:", h)
+print("Señal x[n]:", x)
+print("Convolución y[n]:", y)
+
+# Crear ejes de tiempo
+n_h = np.arange(len(h))
+n_x = np.arange(len(x))
+n_y = np.arange(len(y))
+
+```
 
 #### Manual: 
 ![Gráfica manual convolución](ConvA.jpeg)
+
 
 
 ### Parte B
