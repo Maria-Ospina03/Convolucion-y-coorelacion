@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 # Definir las señales
 h = np.array([5, 6, 0, 0, 9, 0, 1])
-x = np.array([1, 0, 1, 3, 0, 0, 6, 4, 7, 8])
+x = np.array([1, 0, 1, 3, 0, 0, 6, 4, 7, 6])
 
 # Convolución
 y = np.convolve(x, h)
@@ -50,4 +50,5 @@ plt.ylabel("Amplitud")
 plt.grid()
 
 plt.tight_layout()
+
 plt.show()
