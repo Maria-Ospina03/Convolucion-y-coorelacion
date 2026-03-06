@@ -14,10 +14,10 @@ La convolución es una operación que combina dos funciones para describir su su
 Estas herramientas son ampliamente utilizadas en el procesamiento de señales, ya que permiten comprender mejor el comportamiento de los sistemas y la relación entre distintas señales.
 
 ### Desarrollo de la práctica 
-### Parte A
+## Parte A
 Para ésta sección se crearon los sistemas h(n) y x(n), siendo h(n) los digitos del codigo de estudiante y x(n) los digitos del numero de cedula, con esto se encontró la señal y(n) resultante de la convolución de las dos señales, de la cual se obtuvo su representación gráfica y secuencial. Ésto se hizo a mano y programando en python, este apartado se realizo para todos los integrantes del grupo.
 
-## Sección de código donde se hace la convolucion
+### Sección de código donde se hace la convolucion
 
 ```python
 
@@ -83,7 +83,7 @@ Ahora se hace la convolución a mano por cada integrante del grupo.
 
 
 
-### Parte B
+## Parte B
 En este apartado se busco encontrar la correlación cruzada de 2 señales estipuladas :
 
 <img width="371" height="72" alt="image" src="https://github.com/user-attachments/assets/309baa57-fe24-4448-9e4e-fa2408ba89ec" />
@@ -129,7 +129,6 @@ r x1 x2 [k] =
 
 Para la representación grafica:
 
-
 ```python
 
 plt.figure()
@@ -141,6 +140,8 @@ plt.grid(True)
 plt.show()
 
 ```
+
+<img width="527" height="382" alt="image" src="https://github.com/user-attachments/assets/e0bd2a6b-8547-4459-aa83-3a3c7dea093e" />
 
 
 ### Análisis
