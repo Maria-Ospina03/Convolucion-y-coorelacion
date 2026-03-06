@@ -15,12 +15,13 @@ Estas herramientas son ampliamente utilizadas en el procesamiento de señales, y
 
 ### Desarrollo de la páctica 
 ### Parte A
-Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encontró la señal y(n) resultante de la convolución, su representación gráfica y secuencial. Ésto se hizo a mano y programando un código en python.
+Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encontró la señal y(n) resultante de la convolución, su representación gráfica y secuencial. Ésto se hizo a mano y programando un código en python, este apartado se realizo para todos los integrantes del grupo.
 
 #### Código :
 ![Diagrama de flujo del código](2ParteA.png)
 #### Gráfico (Camila Ospina)
-![Gráficas A](2senalA.png)
+<img width="692" height="948" alt="image" src="https://github.com/user-attachments/assets/4b242ea9-0cd7-4554-b205-0eeae3d5e721" />
+
 
 #### Gráfico (Juan Serna)
 <img width="540" height="387" alt="image" src="https://github.com/user-attachments/assets/ca47eadb-8214-4887-b0b6-33866ac589ab" />
@@ -55,6 +56,11 @@ n_y = np.arange(len(y))
 
 
 ### Parte B
+En este apartado se busco encontrar la correlación cruzada de 2 señales previamente estipuladas y su representación gráfica junto a la secuencia resultante por medio de python teniendo encuenta los parametros dados.
+
+<img width="371" height="72" alt="image" src="https://github.com/user-attachments/assets/309baa57-fe24-4448-9e4e-fa2408ba89ec" />
+
+
 ![Diagrama de flujo parte B](2ParteB.png)
 
 ```python
