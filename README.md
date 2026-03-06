@@ -27,9 +27,7 @@ Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encon
 
 
 
-
 ```python
-
 
 # Convolución
 y = np.convolve(x, h)
@@ -59,10 +57,36 @@ n_y = np.arange(len(y))
 ### Parte B
 ![Diagrama de flujo parte B](2ParteB.png)
 
-
 ```python
 
+# Parámetros
+Ts = 1.25e-3        # 1.25 ms
+n = np.arange(0, 9) # 0 ≤ n < 9
+# =========================
+# Definición de señales
+x1 = np.cos(2 * np.pi * 100 * n * Ts)
+x2 = np.sin(2 * np.pi * 100 * n * Ts)
+# =========================
+# Correlación cruzada
+r = np.correlate(x1, x2, mode='full')
+
+# Eje de retardos
+lags = np.arange(-len(x1)+1, len(x1))
+
+# =========================
+# Representación secuencial
+print("Correlación cruzada r_x1x2[k] =")
+print(r)
+
 ```
+La correlacion resultante entre las 2 señales definidas fue
+Correlación cruzada r_x1x2[k] =
+[-2.44929360e-16 -7.07106781e-01 -1.50000000e+00 -1.41421356e+00
+ -1.66533454e-16  2.12132034e+00  3.50000000e+00  2.82842712e+00
+  8.81375476e-17 -2.82842712e+00 -3.50000000e+00 -2.12132034e+00
+  3.33066907e-16  1.41421356e+00  1.50000000e+00  7.07106781e-01
+  0.00000000e+00]
+
 ### Análisis
 
 ## Referencias
