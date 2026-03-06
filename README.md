@@ -51,6 +51,9 @@ x = np.array([1, 0, 1, 3, 0, 0, 6, 4, 7, 6])
 ![Diagrama de flujo del código](2senalA.png)
 
 
+Representación secuencial: Señal resultante y[n] = 
+[ 5  6  5 21 27  0 40 83 60 75 90 36 69 58  7  6]
+
 
 ```python 
 # Definir las señales
@@ -60,6 +63,11 @@ h = np.array([5, 6, 0, 0, 8, 8, 7])
 
 #### Gráfico (Juan Serna)
 <img width="540" height="387" alt="image" src="https://github.com/user-attachments/assets/ca47eadb-8214-4887-b0b6-33866ac589ab" />
+
+
+Representación secuencial: Señal resultante y[n] = 
+[  5   6   5  36  84  71  53 100 163 194 160  85  92 124  92  56]
+
 
 Ahora se hace la convolución a mano por cada integrante del grupo.
 
