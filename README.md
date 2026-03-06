@@ -29,6 +29,8 @@ Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encon
 
 
 ```python
+
+
 # Convolución
 y = np.convolve(x, h)
 
@@ -46,6 +48,11 @@ n_y = np.arange(len(y))
 
 #### Manual (Camila Ospina): 
 ![Gráfica manual convolución](ConvA.jpeg)
+
+
+#### Manual (Juan Serna):
+<img width="552" height="720" alt="image" src="https://github.com/user-attachments/assets/261590bd-724a-4780-9660-2c1eb55b713b" />
+
 
 
 
