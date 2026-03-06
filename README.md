@@ -65,8 +65,10 @@ h = np.array([5, 6, 0, 0, 8, 8, 7])
 <img width="540" height="387" alt="image" src="https://github.com/user-attachments/assets/ca47eadb-8214-4887-b0b6-33866ac589ab" />
 
 
+
 Representación secuencial: Señal resultante y[n] = 
 [  5   6   5  36  84  71  53 100 163 194 160  85  92 124  92  56]
+
 
 
 Ahora se hace la convolución a mano por cada integrante del grupo.
