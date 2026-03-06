@@ -133,7 +133,7 @@ Descripción de la secuencia: Inicia con valores muy cercanos a cero los cuales 
 ¿En qué situaciones resulta útil aplicar la correlación cruzada en 
 el procesamiento digital de señales? 
 
-Esta es útil en los ámbitos de detección de señales que es saber si una señal está contenida dentro de otra ( ejemplo los radares, comunicaciones), otro campo seria la estimación de retardo lo cual es calcular cuánto está desplazada una señal respecto a otra ( ejemplo micrófonos al determinar dirección del sonido o los GPS que cálculan el tiempo de llegada). Tambien esta la medición de similitud para determinar qué tan parecidas son dos señales.
+Es útil en los ámbitos de detección de señales que es saber si una señal está contenida dentro de otra ( ejemplo los radares, comunicaciones), otro campo seria la estimación de retardo lo cual es calcular cuánto está desplazada una señal respecto a otra ( ejemplo micrófonos al determinar dirección del sonido o los GPS que cálculan el tiempo de llegada). Tambien esta la medición de similitud para determinar qué tan parecidas son dos señales.
 
 Para la representación grafica:
 
@@ -150,6 +150,42 @@ plt.show()
 ```
 
 <img width="527" height="382" alt="image" src="https://github.com/user-attachments/assets/e0bd2a6b-8547-4459-aa83-3a3c7dea093e" />
+
+
+## Parte C
+En este apartado con ayuda del generador de señales biológicas se guardo una señal de un electrooculograma la cual se digitalizo con una frecuancia de muestreo de aproximadamente 909 hz, con la cual se caracterizo para obtener su media, mediana, desviación estándar, máximo, mínimo y al ser una señal fisiologica bioelectrica se puede decir que es aleatoria y aperiodica, aunque su forma si puede seguir ciertos patrones no es igual en todos los casos y aunque naturalmente es analogica a la hora de estudiarse se vuelve digital con la frecuencia de muestreo. Posteriormente se le aplico la transformada de fourier y se grafico tanto su transformada como su densidad espectral de potencia y luego se encontro la frecuencia media, frecuencia mediana, desviación estándar, histograma de frecuencias.
+
+En el codigo la señal guardada se puede observar asi:
+
+<img width="936" height="495" alt="image" src="https://github.com/user-attachments/assets/c3fc9f7d-d3c1-47cf-a9f9-7627bc650d71" />
+
+esta señal tiene unos estadisticos de 
+
+----- ANALISIS EOG (5 s) -----
+Media: 0.10335489650533682
+Mediana: 0.129795987041573
+Desviacion estandar: 0.39196472592570697
+Valor minimo: -0.5404063721695511
+Valor maximo: 0.8431046115824024
+
+su transformada de Fourier se ve asi:
+
+<img width="757" height="578" alt="image" src="https://github.com/user-attachments/assets/a5ed6b85-10a8-4d33-b683-a4edce1baf43" />
+
+
+su densidad espectral de potencia se ve asi:
+
+<img width="740" height="586" alt="image" src="https://github.com/user-attachments/assets/382b3746-9acc-44a2-a822-dab7f925d477" />
+
+
+y su histograma de frecuencias se ve asi:
+
+<img width="756" height="585" alt="image" src="https://github.com/user-attachments/assets/36b74b10-28b5-4cda-8653-4875bfede0a5" />
+
+
+
+
+
 
 
 ### Análisis
