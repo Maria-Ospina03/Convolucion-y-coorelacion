@@ -161,21 +161,70 @@ En el codigo la señal guardada se puede observar asi:
 
 esta señal tiene unos estadisticos de 
 
------ ANALISIS EOG (5 s) -----
 Media: 0.10335489650533682
+
 Mediana: 0.129795987041573
+
 Desviacion estandar: 0.39196472592570697
+
 Valor minimo: -0.5404063721695511
+
 Valor maximo: 0.8431046115824024
+
+
+
 
 su transformada de Fourier se ve asi:
 
 <img width="757" height="578" alt="image" src="https://github.com/user-attachments/assets/a5ed6b85-10a8-4d33-b683-a4edce1baf43" />
 
+```python
+
+            fft_vals = np.fft.rfft(senal)
+            freqs = np.fft.rfftfreq(N, 1/fs)
+
+            magnitud = np.abs(fft_vals) / N
+
+            # ===== GRAFICAR TRANSFORMADA =====
+            fig_fft = Figure()
+            ax_fft = fig_fft.add_subplot(111)
+            canvas_fft = FigureCanvas(fig_fft)
+
+            ax_fft.plot(freqs, magnitud)
+            ax_fft.set_title("Transformada de Fourier (FFT)")
+            ax_fft.set_xlabel("Frecuencia (Hz)")
+            ax_fft.set_ylabel("Magnitud")
+            ax_fft.set_xlim(0, 12)
+            ax_fft.grid(True)
+
+            canvas_fft.show()
+```
+
+
 
 su densidad espectral de potencia se ve asi:
 
 <img width="740" height="586" alt="image" src="https://github.com/user-attachments/assets/382b3746-9acc-44a2-a822-dab7f925d477" />
+
+```python
+            psd = (1/(fs*N)) * (np.abs(fft_vals)**2)
+
+            fig_psd = Figure()
+            ax_psd = fig_psd.add_subplot(111)
+            canvas_psd = FigureCanvas(fig_psd)
+
+            ax_psd.plot(freqs, psd)
+            ax_psd.set_title("Densidad Espectral de Potencia (PSD)")
+            ax_psd.set_xlabel("Frecuencia (Hz)")
+            ax_psd.set_ylabel("Potencia")
+            ax_psd.set_xlim(0, 10)
+            ax_psd.grid(True)
+
+            canvas_psd.show()
+```
+
+
+
 
 
 y su histograma de frecuencias se ve asi:
@@ -183,9 +232,57 @@ y su histograma de frecuencias se ve asi:
 <img width="756" height="585" alt="image" src="https://github.com/user-attachments/assets/36b74b10-28b5-4cda-8653-4875bfede0a5" />
 
 
+```python
+
+            fig_hist_f = Figure()
+            ax_hist_f = fig_hist_f.add_subplot(111)
+            canvas_hist_f = FigureCanvas(fig_hist_f)
+
+            # Limitar frecuencias a 0-10 Hz (rango típico EOG)
+            mask = freqs <= 10
+            freqs_eog = freqs[mask]
+            psd_eog = psd[mask]
+
+            ax_hist_f.hist(freqs_eog, bins=20, weights=psd_eog)
+
+            ax_hist_f.set_title("Histograma de Frecuencias (0–10 Hz)")
+            ax_hist_f.set_xlabel("Frecuencia (Hz)")
+            ax_hist_f.set_ylabel("Potencia")
+            ax_hist_f.set_xlim(0,10)
+            ax_hist_f.grid(True)
+
+            canvas_hist_f.show()
+```
+
+Sus estadisticas en el dominio de la frecuencia fueron:
+
+Frecuencia media: 1.6234659751739906 Hz
+
+Frecuencia mediana: 1.3343923749007147 Hz
+
+Desviacion estandar espectral: 1.4154599027701842 Hz
 
 
+```python
+            # Potencia total
+            potencia_total = np.sum(psd)
 
+            # Frecuencia media
+            frecuencia_media = np.sum(freqs * psd) / potencia_total
+
+            # Frecuencia mediana
+            potencia_acumulada = np.cumsum(psd)
+            frecuencia_mediana = freqs[np.where(potencia_acumulada >= potencia_total/2)[0][0]]
+
+            # Desviación estándar espectral
+            varianza_freq = np.sum(((freqs - frecuencia_media)**2) * psd) / potencia_total
+            desviacion_freq = np.sqrt(varianza_freq)
+
+            print("----- ANALISIS EN FRECUENCIA -----")
+            print("Frecuencia media:", frecuencia_media, "Hz")
+            print("Frecuencia mediana:", frecuencia_mediana, "Hz")
+            print("Desviacion estandar espectral:", desviacion_freq, "Hz")
+```
 
 
 ### Análisis
