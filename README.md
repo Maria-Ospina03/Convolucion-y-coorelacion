@@ -157,9 +157,10 @@ En este apartado con ayuda del generador de señales biológicas se guardo una s
 
 En el codigo la señal guardada se puede observar asi:
 
+
 <img width="936" height="495" alt="image" src="https://github.com/user-attachments/assets/c3fc9f7d-d3c1-47cf-a9f9-7627bc650d71" />
 
-esta señal tiene unos estadisticos de 
+----Esta señal tiene unos estadisticos de 
 
 Media: 0.10335489650533682
 
@@ -174,7 +175,8 @@ Valor maximo: 0.8431046115824024
 
 
 
-su transformada de Fourier se ve asi:
+Su transformada de Fourier se ve asi:
+
 
 <img width="757" height="578" alt="image" src="https://github.com/user-attachments/assets/a5ed6b85-10a8-4d33-b683-a4edce1baf43" />
 
@@ -202,7 +204,8 @@ su transformada de Fourier se ve asi:
 
 
 
-su densidad espectral de potencia se ve asi:
+Su densidad espectral de potencia se ve asi:
+
 
 <img width="740" height="586" alt="image" src="https://github.com/user-attachments/assets/382b3746-9acc-44a2-a822-dab7f925d477" />
 
@@ -228,6 +231,7 @@ su densidad espectral de potencia se ve asi:
 
 
 y su histograma de frecuencias se ve asi:
+
 
 <img width="756" height="585" alt="image" src="https://github.com/user-attachments/assets/36b74b10-28b5-4cda-8653-4875bfede0a5" />
 
@@ -255,6 +259,7 @@ y su histograma de frecuencias se ve asi:
 ```
 
 Sus estadisticas en el dominio de la frecuencia fueron:
+
 
 Frecuencia media: 1.6234659751739906 Hz
 
