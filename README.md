@@ -300,6 +300,300 @@ Desviacion estandar espectral: 1.4154599027701842 Hz
 
 ### Análisis
 
+Parte A – Convolución de señales discretas
+
+En esta parte de la práctica se aplicó la operación de convolución entre dos señales discretas 
+𝑥
+[
+𝑛
+]
+x[n] y 
+ℎ
+[
+𝑛
+]
+h[n], donde cada una fue definida a partir de los dígitos del número de cédula y del código estudiantil de los integrantes del grupo.
+
+La convolución permite determinar cómo responde un sistema discreto ante una señal de entrada. En este caso, la señal 
+ℎ
+[
+𝑛
+]
+h[n] puede interpretarse como la respuesta al impulso del sistema, mientras que 
+𝑥
+[
+𝑛
+]
+x[n] representa la señal de entrada. El resultado de esta operación es la señal 
+𝑦
+[
+𝑛
+]
+y[n], que corresponde a la salida del sistema.
+
+Los resultados obtenidos mediante el cálculo manual y mediante Python fueron equivalentes, lo cual confirma que el procedimiento programado reproduce correctamente la operación matemática de convolución. En ambos casos se obtuvo una secuencia cuya longitud es mayor que la de las señales originales, lo cual es esperado ya que la longitud de la convolución está dada por:
+
+𝑁
+𝑦
+=
+𝑁
+𝑥
++
+𝑁
+ℎ
+−
+1
+N
+y
+	​
+
+=N
+x
+	​
+
++N
+h
+	​
+
+−1
+
+Para el caso de la señal calculada por Juan Serna se obtuvo la secuencia:
+
+𝑦
+[
+𝑛
+]
+=
+[
+5
+,
+6
+,
+5
+,
+36
+,
+84
+,
+71
+,
+53
+,
+100
+,
+163
+,
+194
+,
+160
+,
+85
+,
+92
+,
+124
+,
+92
+,
+56
+]
+y[n]=[5,6,5,36,84,71,53,100,163,194,160,85,92,124,92,56]
+
+Observando la gráfica resultante, se puede notar que la señal comienza con valores relativamente pequeños, luego presenta un aumento progresivo hasta alcanzar un máximo cercano a la parte central de la secuencia y posteriormente disminuye nuevamente. Este comportamiento es típico en una convolución, ya que al inicio las señales tienen poca superposición, luego la superposición aumenta gradualmente hasta un punto máximo y finalmente vuelve a disminuir.
+
+Esto demuestra cómo la convolución describe el grado de interacción entre las dos señales a medida que una se desplaza sobre la otra.
+
+Parte B – Correlación cruzada
+
+En esta sección se calculó la correlación cruzada entre dos señales definidas como:
+
+𝑥
+1
+[
+𝑛
+𝑇
+𝑠
+]
+=
+𝑐
+𝑜
+𝑠
+(
+2
+𝜋
+100
+𝑛
+𝑇
+𝑠
+)
+x
+1
+	​
+
+[nT
+s
+	​
+
+]=cos(2π100nT
+s
+	​
+
+)
+𝑥
+2
+[
+𝑛
+𝑇
+𝑠
+]
+=
+𝑠
+𝑖
+𝑛
+(
+2
+𝜋
+100
+𝑛
+𝑇
+𝑠
+)
+x
+2
+	​
+
+[nT
+s
+	​
+
+]=sin(2π100nT
+s
+	​
+
+)
+
+con un período de muestreo 
+𝑇
+𝑠
+=
+1.25
+ 
+𝑚
+𝑠
+T
+s
+	​
+
+=1.25ms.
+
+La correlación cruzada permite medir qué tan similares son dos señales cuando una se desplaza respecto a la otra. A diferencia de la convolución, esta operación se utiliza principalmente para comparar señales en lugar de obtener la salida de un sistema.
+
+La secuencia obtenida fue:
+
+𝑟
+𝑥
+1
+𝑥
+2
+[
+𝑘
+]
+=
+[
+−
+2.44
+𝑒
+−
+16
+,
+−
+0.707
+,
+−
+1.5
+,
+−
+1.414
+,
+.
+.
+.
+,
+1.414
+,
+1.5
+,
+0.707
+,
+0
+]
+r
+x
+1
+	​
+
+x
+2
+	​
+
+	​
+
+[k]=[−2.44e
+−16
+,−0.707,−1.5,−1.414,...,1.414,1.5,0.707,0]
+
+El comportamiento de esta secuencia muestra que la correlación inicia con valores cercanos a cero, posteriormente aparecen valores negativos que indican una relación de desfase entre las señales, y luego aparecen valores positivos cuando el desplazamiento produce una mayor coincidencia entre ambas.
+
+Este resultado es coherente con las señales utilizadas, ya que el seno y el coseno son señales periódicas con un desfase de 90°, por lo que su correlación presenta variaciones entre valores positivos y negativos dependiendo del desplazamiento aplicado.
+
+La gráfica obtenida muestra un comportamiento oscilatorio y aproximadamente simétrico, lo cual refleja la naturaleza periódica de las señales analizadas.
+
+En el procesamiento digital de señales, la correlación cruzada es útil en aplicaciones como:
+
+detección de señales en presencia de ruido
+
+estimación de retardos temporales
+
+sincronización de señales en comunicaciones
+
+medición de similitud entre señales
+
+Parte C – Análisis espectral de la señal EOG
+
+En la última parte de la práctica se analizó una señal real proveniente de un electrooculograma (EOG) adquirida mediante el generador de señales biológicas y posteriormente digitalizada con una frecuencia de muestreo cercana a 909 Hz.
+
+Inicialmente se realizó una caracterización estadística en el dominio del tiempo, obteniendo los siguientes valores:
+
+Media: 0.103
+
+Mediana: 0.129
+
+Desviación estándar: 0.391
+
+Valor mínimo: -0.540
+
+Valor máximo: 0.843
+
+Estos valores indican que la señal presenta variaciones alrededor de un valor promedio cercano a cero, lo cual es característico en señales fisiológicas luego de eliminar el offset DC. Además, la desviación estándar muestra que existe una variabilidad moderada en la amplitud de la señal.
+
+Posteriormente se aplicó la Transformada de Fourier (FFT) para analizar el comportamiento de la señal en el dominio de la frecuencia. La gráfica obtenida muestra que la mayor parte de la energía de la señal se concentra en frecuencias bajas, principalmente por debajo de los 10 Hz, lo cual coincide con el comportamiento típico de las señales EOG, ya que los movimientos oculares generan componentes de muy baja frecuencia.
+
+El análisis de la densidad espectral de potencia (PSD) permitió identificar cómo se distribuye la energía de la señal a lo largo del espectro de frecuencias. Los resultados obtenidos fueron:
+
+Frecuencia media: 1.62 Hz
+
+Frecuencia mediana: 1.33 Hz
+
+Desviación estándar espectral: 1.41 Hz
+
+Estos valores indican que la mayor parte del contenido espectral de la señal se encuentra concentrado en un rango de freencias muy bajas, lo cual es consistente con la naturaleza lenta de los movimientos oculares.
+
+Finalmente, el histograma de frecuencias mostró que la potencia de la señal se distribuye principalmente entre 0 y 5 Hz, confirmando nuevamente que el EOG es una señal dominada por componentes de baja frecuencia.
+
+En conjunto, este análisis permitió observar cómo las herramientas de procesamiento digital de señales —como la convolución, la correlación y la Transformada de Fourier— permiten estudiar tanto el comportamiento temporal como espectral de diferentes tipos de señales.
+
+
+
 ## Referencias
 [1] M. Wyant, “Convolución,” MATLAB & Simulink. https://la.mathworks.com/discovery/convolution.html
 [2] E. De Redacción De La Universidad Internacional De La Rioja, “¿Qué es un análisis de correlación? Características y Ejemplos,” UNIR México, Feb. 21, 2024. [Online]. Available: https://mexico.unir.net/noticias/economia/analisis-correlacion/
