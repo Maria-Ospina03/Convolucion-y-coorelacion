@@ -13,11 +13,31 @@ La convolución es una operación que combina dos funciones para describir su su
 
 Estas herramientas son ampliamente utilizadas en el procesamiento de señales, ya que permiten comprender mejor el comportamiento de los sistemas y la relación entre distintas señales.
 
-### Desarrollo de la páctica 
+### Desarrollo de la práctica 
 ### Parte A
 Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encontró la señal y(n) resultante de la convolución, su representación gráfica y secuencial. Ésto se hizo a mano y programando un código en python, este apartado se realizo para todos los integrantes del grupo.
 
-#### Código :
+## Sección de código donde se hace la convolucion
+Esta sección convoluciona las señales previamente definidas
+
+```python
+
+# Convolución
+y = np.convolve(x, h)
+
+# Mostrar resultado
+print("Señal h[n]:", h)
+print("Señal x[n]:", x)
+print("Convolución y[n]:", y)
+
+# Crear ejes de tiempo
+n_h = np.arange(len(h))
+n_x = np.arange(len(x))
+n_y = np.arange(len(y))
+
+```
+
+#### Diagrama de flujo del código :
 ![Diagrama de flujo del código](2ParteA.png)
 
 ```python
@@ -42,24 +62,7 @@ h = np.array([5, 6, 0, 0, 8, 8, 7])
 #### Gráfico (Juan Serna)
 <img width="540" height="387" alt="image" src="https://github.com/user-attachments/assets/ca47eadb-8214-4887-b0b6-33866ac589ab" />
 
-
-
-```python
-
-# Convolución
-y = np.convolve(x, h)
-
-# Mostrar resultado
-print("Señal h[n]:", h)
-print("Señal x[n]:", x)
-print("Convolución y[n]:", y)
-
-# Crear ejes de tiempo
-n_h = np.arange(len(h))
-n_x = np.arange(len(x))
-n_y = np.arange(len(y))
-
-```
+Ahora se hace la convolución a mano por cada integrante del grupo.
 
 #### Manual (Camila Ospina): 
 <img width="692" height="948" alt="image" src="https://github.com/user-attachments/assets/4b242ea9-0cd7-4554-b205-0eeae3d5e721" />
@@ -72,7 +75,7 @@ n_y = np.arange(len(y))
 
 
 ### Parte B
-En este apartado se busco encontrar la correlación cruzada de 2 señales previamente estipuladas y su representación gráfica junto a la secuencia resultante por medio de python teniendo encuenta los parametros dados.
+En este apartado se busco encontrar la correlación cruzada de 2 señales previamente estipuladas mostrando su representación gráfica junto a la secuencia resultante por medio de python teniendo encuenta los parametros dados:
 
 <img width="371" height="72" alt="image" src="https://github.com/user-attachments/assets/309baa57-fe24-4448-9e4e-fa2408ba89ec" />
 
@@ -108,6 +111,8 @@ Correlación cruzada r_x1x2[k] =
   8.81375476e-17 -2.82842712e+00 -3.50000000e+00 -2.12132034e+00
   3.33066907e-16  1.41421356e+00  1.50000000e+00  7.07106781e-01
   0.00000000e+00]
+
+
 
 ### Análisis
 
