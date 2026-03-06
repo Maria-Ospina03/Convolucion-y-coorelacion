@@ -303,3 +303,6 @@ Desviacion estandar espectral: 1.4154599027701842 Hz
 ## Referencias
 [1] M. Wyant, “Convolución,” MATLAB & Simulink. https://la.mathworks.com/discovery/convolution.html
 [2] E. De Redacción De La Universidad Internacional De La Rioja, “¿Qué es un análisis de correlación? Características y Ejemplos,” UNIR México, Feb. 21, 2024. [Online]. Available: https://mexico.unir.net/noticias/economia/analisis-correlacion/
+[3] Proakis, J. G., & Manolakis, D. G. (2007). Digital Signal Processing: Principles, Algorithms and Applications. Pearson.
+[4] Bioingeniería. (2013, diciembre). Electrooculograma. Bioingeniería. https://bioingenieria5.blogspot.com/2013/12/electrooculograma.html
+
