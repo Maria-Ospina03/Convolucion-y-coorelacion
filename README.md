@@ -128,6 +128,12 @@ r x1 x2 [k] =
   3.33066907e-16  1.41421356e+00  1.50000000e+00  7.07106781e-01
   0.00000000e+00]
 
+Descripción de la secuencia: Inicia con valores muy cercanos a cero los cuales van disminuyendo hasta valores negativos y esto cambia progresivamente al luego los valores ser números positivos, siendo esto un ciclo que se repite 2 veces antes de que la señal vuelva a dar cero, teniendo como dato que mas se repite el cero o valores cercanos al mismo.
+
+¿En qué situaciones resulta útil aplicar la correlación cruzada en 
+el procesamiento digital de señales? 
+
+Esta es útil en los ámbitos de detección de señales que es saber si una señal está contenida dentro de otra ( ejemplo los radares, comunicaciones), otro campo seria la estimación de retardo lo cual es calcular cuánto está desplazada una señal respecto a otra ( ejemplo micrófonos al determinar dirección del sonido o los GPS que cálculan el tiempo de llegada). Tambien esta la medición de similitud para determinar qué tan parecidas son dos señales.
 
 Para la representación grafica:
 
