@@ -85,6 +85,7 @@ Ahora se hace la convolución a mano por cada integrante del grupo.
 
 ### Parte B
 En este apartado se busco encontrar la correlación cruzada de 2 señales estipuladas :
+
 <img width="371" height="72" alt="image" src="https://github.com/user-attachments/assets/309baa57-fe24-4448-9e4e-fa2408ba89ec" />
 
 
@@ -118,13 +119,28 @@ print(r)
 
 ```
 La correlacion resultante entre las 2 señales definidas fue
-Correlación cruzada r_x1x2[k] =
+r x1 x2 [k] =
 [-2.44929360e-16 -7.07106781e-01 -1.50000000e+00 -1.41421356e+00
  -1.66533454e-16  2.12132034e+00  3.50000000e+00  2.82842712e+00
   8.81375476e-17 -2.82842712e+00 -3.50000000e+00 -2.12132034e+00
   3.33066907e-16  1.41421356e+00  1.50000000e+00  7.07106781e-01
   0.00000000e+00]
 
+
+Para la representación grafica:
+
+
+```python
+
+plt.figure()
+plt.stem(lags, r)
+plt.title("Correlación cruzada entre x1[n] y x2[n]")
+plt.xlabel("Retardo k")
+plt.ylabel("r_x1x2[k]")
+plt.grid(True)
+plt.show()
+
+```
 
 
 ### Análisis
