@@ -84,10 +84,14 @@ Ahora se hace la convolución a mano por cada integrante del grupo.
 
 
 ### Parte B
-En este apartado se busco encontrar la correlación cruzada de 2 señales previamente estipuladas mostrando su representación gráfica junto a la secuencia resultante por medio de python teniendo encuenta los parametros dados:
-
+En este apartado se busco encontrar la correlación cruzada de 2 señales estipuladas :
 <img width="371" height="72" alt="image" src="https://github.com/user-attachments/assets/309baa57-fe24-4448-9e4e-fa2408ba89ec" />
 
+
+mostrando su representación gráfica y secuencial por medio de python teniendo encuenta los parametros dados.
+
+
+#### Diagrama de flujo general del código :
 
 ![Diagrama de flujo parte B](2ParteB.png)
 
