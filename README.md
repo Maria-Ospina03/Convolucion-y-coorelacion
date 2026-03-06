@@ -33,7 +33,11 @@ x = np.array([1, 0, 1, 3, 0, 0, 6, 4, 7, 6])
 
 
 
-
+```python 
+# Definir las señales
+x = np.array([1, 0, 1, 6, 8, 3, 4, 4, 4, 8])
+h = np.array([5, 6, 0, 0, 8, 8, 7])
+```
 
 #### Gráfico (Juan Serna)
 <img width="540" height="387" alt="image" src="https://github.com/user-attachments/assets/ca47eadb-8214-4887-b0b6-33866ac589ab" />
