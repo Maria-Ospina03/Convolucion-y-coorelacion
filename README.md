@@ -15,10 +15,9 @@ Estas herramientas son ampliamente utilizadas en el procesamiento de señales, y
 
 ### Desarrollo de la práctica 
 ### Parte A
-Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encontró la señal y(n) resultante de la convolución, su representación gráfica y secuencial. Ésto se hizo a mano y programando un código en python, este apartado se realizo para todos los integrantes del grupo.
+Para ésta sección se crearon los sistemas h(n) y x(n), siendo h(n) los digitos del codigo de estudiante y x(n) los digitos del numero de cedula, con esto se encontró la señal y(n) resultante de la convolución de las dos señales, de la cual se obtuvo su representación gráfica y secuencial. Ésto se hizo a mano y programando en python, este apartado se realizo para todos los integrantes del grupo.
 
 ## Sección de código donde se hace la convolucion
-Esta sección convoluciona las señales previamente definidas
 
 ```python
 
@@ -37,7 +36,7 @@ n_y = np.arange(len(y))
 
 ```
 
-#### Diagrama de flujo del código :
+#### Diagrama de flujo general del código :
 ![Diagrama de flujo del código](2ParteA.png)
 
 ```python
