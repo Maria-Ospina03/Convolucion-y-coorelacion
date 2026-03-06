@@ -20,7 +20,7 @@ Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encon
 #### Código :
 ![Diagrama de flujo del código](2ParteA.png)
 #### Gráfico (Camila Ospina)
-<img width="692" height="948" alt="image" src="https://github.com/user-attachments/assets/4b242ea9-0cd7-4554-b205-0eeae3d5e721" />
+
 
 
 #### Gráfico (Juan Serna)
@@ -46,7 +46,7 @@ n_y = np.arange(len(y))
 ```
 
 #### Manual (Camila Ospina): 
-![Gráfica manual convolución](ConvA.jpeg)
+<img width="692" height="948" alt="image" src="https://github.com/user-attachments/assets/4b242ea9-0cd7-4554-b205-0eeae3d5e721" />
 
 
 #### Manual (Juan Serna):
