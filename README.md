@@ -19,8 +19,20 @@ Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encon
 
 #### Código :
 ![Diagrama de flujo del código](2ParteA.png)
+
+```python
+
+# Definir las señales
+h = np.array([5, 6, 0, 0, 9, 0, 1])
+x = np.array([1, 0, 1, 3, 0, 0, 6, 4, 7, 6])
+
+```
+
 #### Gráfico (Camila Ospina)
 ![Diagrama de flujo del código](2senalA.png)
+
+
+
 
 
 #### Gráfico (Juan Serna)
