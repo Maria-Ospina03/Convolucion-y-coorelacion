@@ -155,6 +155,14 @@ plt.show()
 ## Parte C
 En este apartado con ayuda del generador de señales biológicas se guardo una señal de un electrooculograma la cual se digitalizo con una frecuancia de muestreo de aproximadamente 909 hz, con la cual se caracterizo para obtener su media, mediana, desviación estándar, máximo, mínimo y al ser una señal fisiologica bioelectrica se puede decir que es aleatoria y aperiodica, aunque su forma si puede seguir ciertos patrones no es igual en todos los casos y aunque naturalmente es analogica a la hora de estudiarse se vuelve digital con la frecuencia de muestreo. Posteriormente se le aplico la transformada de fourier y se grafico tanto su transformada como su densidad espectral de potencia y luego se encontro la frecuencia media, frecuencia mediana, desviación estándar, histograma de frecuencias.
 
+
+#### Diagrama de flujo general del codigo
+
+
+<img width="1806" height="3688" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/2d420f07-1e75-417e-a7af-49619a1e16fe" />
+
+
+
 En el codigo la señal guardada se puede observar asi:
 
 
