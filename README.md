@@ -20,7 +20,7 @@ Para ésta sección se crearon los sistemas h(n) y x(n), posteriormente se encon
 #### Código :
 ![Diagrama de flujo del código](2ParteA.png)
 #### Gráfico (Camila Ospina)
-
+![Diagrama de flujo del código](2senalA.png)
 
 
 #### Gráfico (Juan Serna)
